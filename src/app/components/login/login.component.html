@@ -1,0 +1,19 @@
+<form style="margin-top: 30px;" *ngIf="!authService.getUser()">
+  <div class="alert alert-danger" role="alert" *ngIf="message">
+    {{ message }}
+  </div>
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="username" class="form-control" id="username" placeholder="Enter username" #username>
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" id="password" placeholder="Enter password" #password>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)='login(username.value, password.value)'>Submit</button>
+</form>
+
+<div class="well" *ngIf="authService.getUser()">
+  Logged in as <b>{{ authService.getUser() }}</b>
+  <a href (click)="logout()">Log out</a>
+</div>

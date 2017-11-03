@@ -1,0 +1,21 @@
+.nav-bar{
+  height: 50px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  background-color: purple;
+}
+.right{
+  height: 50px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+div a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  line-height: 18px;
+  padding: 16px 10px;
+}
